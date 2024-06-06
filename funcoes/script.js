@@ -10,10 +10,10 @@
 function areaQuadrado(lado) {
     return lado * lado;
 }
-  
-  areaQuadrado(4) // 16
-  areaQuadrado(5) // 25
-  areaQuadrado(2) // 4
+
+areaQuadrado(4) // 16
+areaQuadrado(5) // 25
+areaQuadrado(2) // 4
 
 /*
 
@@ -28,10 +28,10 @@ function areaQuadrado(lado) {
 function imc(peso, altura) {
     const imc = peso / (altura ** 2);
     return imc;
-  }
-  
-  imc(80, 1.80) // 80 e 1.80 são os argumentos
-  imc(60, 1.70) // 60 e 1.70 são os argumentos
+}
+
+imc(80, 1.80) // 80 e 1.80 são os argumentos
+imc(60, 1.70) // 60 e 1.70 são os argumentos
 
 /* 
 
@@ -41,7 +41,7 @@ function imc(peso, altura) {
 */
 
 function corFavorita(cor) {
-    if(cor === "azul") {
+    if (cor === "azul") {
         return "Eu gosto do céu"
     } else if (cor === "verde") {
         return "Eu gosto de mato"
@@ -59,9 +59,70 @@ function corFavorita(cor) {
 
 */
 
-addEventListener('click', function() {
+addEventListener('click', function () {
     console.log('Clicou');
-  });
-  // A função possui dois argumentos
-  // Primeiro é a string 'click'
-  // Segundo é uma função anônima
+});
+// A função possui dois argumentos
+// Primeiro é a string 'click'
+// Segundo é uma função anônima
+
+/* 
+
+    PODE OU NÃO RETORNAR UM VALOR
+
+    Quando não definimos o return, 
+    ela irá retornar undefined. O código interno 
+    da função é executado normalmente, independente de 
+    existir valor de return ou não.
+
+*/
+
+function imc2(peso, altura) {
+    const imc = peso / (altura ** 2);
+    console.log(imc);
+}
+
+imc2(80, 1.80); // retorna o imc
+console.log(imc2(80, 1.80)); // retorna o imc e undefined
+
+/*
+ 
+VALORES RETORNADOS
+
+Uma função pode retornar qualquer tipo de dado e até outras funções.
+
+*/
+
+function terceiraIdade(idade) {
+    if (typeof idade !== 'number') {
+        return 'Informe a sua idade!';
+    } else if (idade >= 60) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+/*
+ 
+  ESCOPO LÉXICO
+
+  Funções conseguem acessar variáveis que foram criadas no contexto pai
+ 
+*/
+
+var profissao = 'Designer';
+
+function dados() {
+    var nome = 'André';
+    var idade = 28;
+    function outrosDados() {
+        var endereco = 'Rio de Janeiro';
+        var idade = 29;
+        return `${nome}, ${idade}, ${endereco}, ${profissao}`;
+    }
+    return outrosDados();
+}
+
+dados(); // Retorna 'André, 29, Rio de Janeiro, Designer'
+outrosDados(); // retorna um erro
