@@ -227,3 +227,4 @@ function areaQuadrado(lado) {
 function perimetro(lados, lado) {
     return lados * lado
 }
+
