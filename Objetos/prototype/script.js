@@ -11,8 +11,8 @@ function Pessoa(nome, idade) {
 
 const andre = new Pessoa('André', 28);
 
-console.log(Pessoa.prototype); // retorna o objeto
-console.log(andre.prototype); // undefined
+// console.log(Pessoa.prototype); // retorna o objeto
+// console.log(andre.prototype); // undefined
 
 /**
  * FUNCAO.PROTOTYPE
@@ -26,7 +26,7 @@ Pessoa.prototype.andar = function () {
 Pessoa.prototype.nadar = function () {
     return this.nome + ' nadou';
 }
-console.log(Pessoa.prototype); // retorna o objeto
+// console.log(Pessoa.prototype); // retorna o objeto
 
 /**
  * ACESSO AO PROTÓTIPO
@@ -70,7 +70,3 @@ Object.prototype;
 andre.toString();
 andre.isPrototypeOf();
 andre.valueOf();
-
-/**
- * PROTOTYPE 2
- */
