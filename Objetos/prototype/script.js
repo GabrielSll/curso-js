@@ -8,6 +8,7 @@ function Pessoa(nome, idade) {
     this.nome = nome;
     this.idade = idade;
 }
+
 const andre = new Pessoa('André', 28);
 
 console.log(Pessoa.prototype); // retorna o objeto
@@ -69,3 +70,7 @@ Object.prototype;
 andre.toString();
 andre.isPrototypeOf();
 andre.valueOf();
+
+/**
+ * PROTOTYPE 2
+ */
