@@ -248,6 +248,7 @@ const transacoes = [
   const frase4 = 'Melhor do ano!';
 
   console.log(frase4[frase4.length - 1])
+  console.log(frase4.slice(-1))
 
   // Retorne o total de taxas
   const transacoes2 = ['Taxa do Banco', '   TAXA DO PÃO', '  taxa do mercado', 'depósito Bancário', 'TARIFA especial'];
