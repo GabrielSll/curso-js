@@ -195,6 +195,8 @@ valor.trimEnd(); // '  R$ 23.00'
 // Utilizando o foreach na array abaixo,
 // some os valores de Taxa e os valores de Recebimento
 
+
+
 const transacoes = [
     {
       descricao: 'Taxa do Pão',
@@ -230,9 +232,9 @@ const transacoes = [
     }
   })
   
+  
   // Retorne uma array com a lista abaixo
   const transportes = 'Carro;Avião;Trem;Ônibus;Bicicleta';
-  
   const arrayTransportes = transportes.split(';')
 
 
@@ -243,7 +245,6 @@ const transacoes = [
                   <li><span>Contato</span></li>
                 </ul>`;
 
-  
   // Retorne o último caracter da frase
   const frase4 = 'Melhor do ano!';
 
@@ -258,7 +259,7 @@ const transacoes = [
   transacoes2.forEach((item) => {
       item = item.toLowerCase();
       item = item.trim();
-    item = item.slice(0, 4)
+      item = item.slice(0, 4)
     
     if (item === 'taxa') {
         totalTaxas++
