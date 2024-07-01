@@ -309,3 +309,22 @@ const aulasMaiores = aulas4.filter((aula) => {
   return aula.min > 15;
 });
 // [{nome: 'CSS 1', min: 20}, {nome: 'JS 1', min: 25}]
+
+// ---------- EXERCICIOS -------------
+
+let cursos = document.querySelectorAll('section.curso');
+const titulo = document.querySelectorAll('section.curso h1');
+const descricao = document.querySelectorAll('section.curso p');
+const aulas8 = document.querySelectorAll('span.aulas');
+const horas = document.querySelectorAll('span.horas');
+
+cursos = Array.from(cursos)
+
+cursosObjeto = cursos.map((curso) => {
+  return curso = {
+    titulo: titulo,
+    descricao: descricao,
+    aulas: aulas8,
+    horas: horas,
+  }
+})
