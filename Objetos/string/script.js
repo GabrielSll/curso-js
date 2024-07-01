@@ -224,7 +224,7 @@ const transacoes = [
   transacoes.forEach((item) => {
     const valorLimpo = +item.valor.replace('R$ ', '');
     if (item.descricao.slice(0, 4) === 'Taxa') {
-        taxaTotal += valorLimpo
+        taxaTotal += valorLimpo;
     } else if (item.descricao.slice(0, 4) === 'Rece') {
         recebimentoTotal += valorLimpo;
     }
